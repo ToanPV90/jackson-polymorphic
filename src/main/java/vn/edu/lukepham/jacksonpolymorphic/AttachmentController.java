@@ -12,7 +12,7 @@ public class AttachmentController {
 
     @PostMapping("/")
     public ResponseEntity create(@RequestBody Attachment attachment) {
-        if (AttachmentType.AUDIO.equals(AttachmentType.valueOf(attachment.getType()))) {
+        if (AttachmentType.AUDIO.equals(attachment.getType())) {
             AudioAttachment audioAttachment = (AudioAttachment) attachment;
             System.out.println(audioAttachment.getAid());
         } else {

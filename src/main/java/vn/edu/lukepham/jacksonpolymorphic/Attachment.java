@@ -11,6 +11,6 @@ import lombok.Data;
 })
 @Data
 public class Attachment {
-    private String type;
+    private AttachmentType type;
     private String description;
 }
